@@ -6,3 +6,16 @@
 // ["1234", "1567", "-2", "computer science"] -> ["-2"]
 // ["Russia", "Denmark", "Kazan"] -> []
 
+string[] arrayStart = new string[ ] {"12", "2", "4", "jhgfhgfhj)"};
+string[] arrayEnd = new string[arrayStart.Length];
+int count = 0;
+for (int i = 0; i < arrayStart.Length; i++)
+{
+    if (arrayStart[i].Length <= 3)
+    {
+        arrayEnd[count] = arrayStart[i];
+        count++;
+    }
+}
+Console.WriteLine($"Заданный массив: [{string.Join(", ", arrayStart)}]");
+Console.WriteLine($"Полученный массив: [{string.Join(", ", arrayEnd)}]");
